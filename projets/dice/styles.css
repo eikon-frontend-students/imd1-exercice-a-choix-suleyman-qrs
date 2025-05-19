@@ -21,3 +21,279 @@ button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
 }
+
+.dice-3d-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  min-height: 120px;
+}
+
+.dice-3d {
+  width: 80px;
+  height: 80px;
+  perspective: 600px;
+  display: inline-block;
+  overflow: visible;
+}
+
+.dice-cube {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+  overflow: visible;
+}
+
+.dice-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  user-select: none;
+}
+
+.dice-face-1 { transform: rotateY(0deg) translateZ(40px); }
+.dice-face-2 { transform: rotateY(180deg) translateZ(40px); }
+.dice-face-3 { transform: rotateY(90deg) translateZ(40px); }
+.dice-face-4 { transform: rotateY(-90deg) translateZ(40px); }
+.dice-face-5 { transform: rotateX(90deg) translateZ(40px); }
+.dice-face-6 { transform: rotateX(-90deg) translateZ(40px); }
+
+.dice-3d.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* d4 pyramid */
+.dice-pyramid {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+  overflow: visible;
+}
+.pyramid-face {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid #fff;
+  color: #222;
+  font-size: 1.5rem;
+  text-align: center;
+  left: 0;
+  top: 0;
+  line-height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: transparent;
+}
+.pyramid-face span {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+.pyramid-face-1 { transform: rotateY(0deg)    rotateX(19deg) translateZ(20px);}
+.pyramid-face-2 { transform: rotateY(120deg)  rotateX(19deg) translateZ(20px);}
+.pyramid-face-3 { transform: rotateY(240deg)  rotateX(19deg) translateZ(20px);}
+.pyramid-face-4 { transform: rotateX(-90deg) translateY(-40px) translateZ(35px);}
+
+/* d8 octahedron */
+.dice-octahedron {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+}
+.octa-face {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 5px;
+  top: 5px;
+  opacity: 0.95;
+}
+/* Only 2 faces shown for demo, real 3D would need more transforms */
+.octa-face-1 { transform: rotateX(0deg) translateZ(35px);}
+.octa-face-2 { transform: rotateX(180deg) translateZ(35px);}
+.octa-face-3 { display:none;}
+.octa-face-4 { display:none;}
+.octa-face-5 { display:none;}
+.octa-face-6 { display:none;}
+.octa-face-7 { display:none;}
+.octa-face-8 { display:none;}
+
+/* d10 pentagonal bipyramid */
+.dice-pentagonal {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+}
+.penta-face {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 10px;
+  top: 10px;
+  opacity: 0.95;
+}
+.penta-face-1 { transform: rotateX(0deg) translateZ(30px);}
+.penta-face-2 { transform: rotateX(180deg) translateZ(30px);}
+.penta-face-3 { display:none;}
+.penta-face-4 { display:none;}
+.penta-face-5 { display:none;}
+.penta-face-6 { display:none;}
+.penta-face-7 { display:none;}
+.penta-face-8 { display:none;}
+.penta-face-9 { display:none;}
+.penta-face-10 { display:none;}
+
+/* d12 dodecahedron */
+.dice-dodecahedron {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+}
+.dodeca-face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 15px;
+  top: 15px;
+  opacity: 0.95;
+}
+.dodeca-face-1 { transform: rotateX(0deg) translateZ(25px);}
+.dodeca-face-2 { transform: rotateX(180deg) translateZ(25px);}
+.dodeca-face-3 { display:none;}
+.dodeca-face-4 { display:none;}
+.dodeca-face-5 { display:none;}
+.dodeca-face-6 { display:none;}
+.dodeca-face-7 { display:none;}
+.dodeca-face-8 { display:none;}
+.dodeca-face-9 { display:none;}
+.dodeca-face-10 { display:none;}
+.dodeca-face-11 { display:none;}
+.dodeca-face-12 { display:none;}
+
+/* d20 icosahedron */
+.dice-icosahedron {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+}
+.icosa-face {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  top: 20px;
+  opacity: 0.95;
+}
+.icosa-face-1 { transform: rotateX(0deg) translateZ(20px);}
+.icosa-face-2 { transform: rotateX(180deg) translateZ(20px);}
+.icosa-face-3 { display:none;}
+.icosa-face-4 { display:none;}
+.icosa-face-5 { display:none;}
+.icosa-face-6 { display:none;}
+.icosa-face-7 { display:none;}
+.icosa-face-8 { display:none;}
+.icosa-face-9 { display:none;}
+.icosa-face-10 { display:none;}
+.icosa-face-11 { display:none;}
+.icosa-face-12 { display:none;}
+.icosa-face-13 { display:none;}
+.icosa-face-14 { display:none;}
+.icosa-face-15 { display:none;}
+.icosa-face-16 { display:none;}
+.icosa-face-17 { display:none;}
+.icosa-face-18 { display:none;}
+.icosa-face-19 { display:none;}
+.icosa-face-20 { display:none;}
+
+/* d100 percentile (shows only 10s for demo) */
+.dice-percentile {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(.23,1.02,.64,.99);
+}
+.percentile-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  opacity: 0.95;
+}
+.percentile-face-1 { transform: rotateY(0deg) translateZ(40px);}
+.percentile-face-2 { transform: rotateY(36deg) translateZ(40px);}
+.percentile-face-3 { transform: rotateY(72deg) translateZ(40px);}
+.percentile-face-4 { transform: rotateY(108deg) translateZ(40px);}
+.percentile-face-5 { transform: rotateY(144deg) translateZ(40px);}
+.percentile-face-6 { transform: rotateY(180deg) translateZ(40px);}
+.percentile-face-7 { transform: rotateY(216deg) translateZ(40px);}
+.percentile-face-8 { transform: rotateY(252deg) translateZ(40px);}
+.percentile-face-9 { transform: rotateY(288deg) translateZ(40px);}
+.percentile-face-10 { transform: rotateY(324deg) translateZ(40px);}
