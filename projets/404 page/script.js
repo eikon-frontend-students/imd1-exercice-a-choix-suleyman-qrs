@@ -6,7 +6,7 @@ const diceContainer = document.getElementById('diceContainer');
         const historyDisplay = document.getElementById('history');
         const diceOptions = document.querySelectorAll('.dice-option');
         
-        let selectedDiceType = 'd4';
+        let selectedDiceType = 'd6';
         let diceElements = [];
         let rollHistory = [];
         
