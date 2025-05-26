@@ -1,5 +1,6 @@
 body {
     background: #0b0721;
+    font-family: 'Press Start 2P', 'Fira Mono', 'Consolas', monospace;
     color: #fff;
     margin: 0;
     min-height: 100vh;
@@ -9,7 +10,7 @@ body {
 }
 
 .window {
-    font-family: 'Press Start 2P', 'Fira Mono', 'Consolas', monospace;
+
     background: #0b0721;
     border: 2px solid #ffb3de;
     border-radius: 12px;
@@ -43,14 +44,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: inherit;
     border-bottom: 2px solid #ffb3de;
     position: relative;
 }
 
 .window-title {
     font-weight: bold;
-    font-family: "PixelifySans", sans-serif;
     letter-spacing: 1px;
 }
 
@@ -59,20 +58,18 @@ body {
 }
 
 .window-user {
-    font-family: "PixelifySans", sans-serif;
     font-size: 1rem;
     color: #231942;
     opacity: 0.9;
 }
 
 .window-user:hover {
-    font-family: "PixelifySans", sans-serif;
-    font-size: 1rem;
     color: #ffb3de;
     background-color: #0b0721;
     border-radius: 3px;
-    opacity: 0.9;
 }
+
+
 .window-content {
     flex: 1;
     padding: 3rem 2rem 2rem 4rem;
@@ -253,11 +250,10 @@ p {
 
 button {
     background-color: #FFADE3;
+    border: #FFADE3 solid 2px;
     color: white;
-    border: none;
     padding: 1rem 2rem;
     font-family: inherit;
-    font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s;
@@ -269,7 +265,7 @@ button:hover {
     background-color: #0b0721;
     color: #FFADE3;
     transform: translateY(-3px);
-    border: #FFADE3 solid 2px;
+
 }
 
 button:active {
