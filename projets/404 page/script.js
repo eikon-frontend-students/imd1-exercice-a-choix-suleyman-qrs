@@ -149,3 +149,51 @@ function rollSingleDie(dieElement, isPartOfGroupRoll = false) {
         }, rollDuration);
     });
 }
+
+function useScramble(element, text, speed = 80) {
+    let i = 0;
+    const scrambleChars = '!@#$%^&*()_+-=~[]{}|;:,.<>?';
+    const original = text;
+    function scrambleStep() {
+        let display = '';
+        for (let j = 0; j < original.length; j++) {
+            if (j < i) {
+                display += original[j];
+            } else {
+                display += scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+            }
+        }
+        element.textContent = display;
+        if (i < original.length) {
+            i++;
+            setTimeout(scrambleStep, speed);
+        } else {
+            element.textContent = original;
+        }
+    }
+    scrambleStep();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const errorCode = document.querySelector('.error-code');
+    const errorText = document.querySelector('.error-text');
+    const windowTitle = document.querySelector('.window-title');
+    if (errorCode) {
+        const originalErrorCode = errorCode.textContent.trim();
+        errorCode.addEventListener('mouseenter', () => {
+            useScramble(errorCode, originalErrorCode, 80);
+        });
+    }
+    if (errorText) {
+        const originalErrorText = errorText.textContent.trim();
+        errorText.addEventListener('mouseenter', () => {
+            useScramble(errorText, originalErrorText, 25);
+        });
+    }
+    if (windowTitle) {
+        const originalWindowTitle = windowTitle.textContent.trim();
+        windowTitle.addEventListener('mouseenter', () => {
+            useScramble(windowTitle, originalWindowTitle, 60);
+        });
+    }
+});
