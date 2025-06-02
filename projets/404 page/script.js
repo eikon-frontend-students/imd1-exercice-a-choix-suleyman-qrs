@@ -107,7 +107,6 @@ function rollSingleDie(dieElement, isPartOfGroupRoll = false) {
 
         // Roll for 1 second
         const rollDuration = 1000;
-
         const rollInterval = setInterval(() => {
             const randomValue = Math.floor(Math.random() * sides) + 1;
 

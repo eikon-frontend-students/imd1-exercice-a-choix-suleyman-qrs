@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>EpicGameJam.x24_x10</title>
 </head>
+
 <body>
     <div class="window">
         <div class="window-titlebar">
@@ -18,35 +20,32 @@
         <div class="window-content">
             <div class="error-message">
                 <div class="error-code">404</div>
-                <div class="error-text">The requested page could not be found. Roll some dice while you're here...</div>
+                <div class="error-text">The requested page could not be found. Roll some dice while you're here...
+                </div>
             </div>
             <div class="dice-game">
-                
                 <div class="dice-selection">
                     <div class="dice-option" data-type="d4">d4</div>
-                    <div class="dice-option  selected" data-type="d6">d6</div>
+                    <div class="dice-option selected" data-type="d6">d6</div>
                     <div class="dice-option" data-type="d8">d8</div>
                     <div class="dice-option" data-type="d10">d10</div>
                     <div class="dice-option" data-type="d12">d12</div>
                     <div class="dice-option" data-type="d20">d20</div>
                     <div class="dice-option" data-type="d100">d100</div>
                 </div>
-                
                 <div class="controls">
                     <button id="addDie">Add Die</button>
                     <button id="rollButton">Roll Dice</button>
                     <button id="clearButton">Clear</button>
                 </div>
-                
                 <div class="dice-container" id="diceContainer"></div>
-                
                 <div class="result" id="result"></div>
                 <div class="history" id="history"></div>
-                
                 <a href="/" class="home-link">← Back to Homepage</a>
             </div>
         </div>
     </div>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
+
 </html>

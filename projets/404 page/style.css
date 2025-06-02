@@ -8,6 +8,7 @@ body {
     justify-content: center;
 }
 
+/* --- window with pink border --- */
 .window {
     background: #0b0721;
     border: 2px solid #ffb3de;
@@ -20,17 +21,18 @@ body {
     flex-direction: column;
 }
 
-
+/* --- Fonts used --- */
 @font-face {
-  font-family: "PixelifySans";
-  src: url(Fonts/PixelifySans-VariableFont_wght.ttf);
+    font-family: "PixelifySans";
+    src: url(Fonts/PixelifySans-VariableFont_wght.ttf);
 }
 @font-face {
-  font-family: "IBM Plex Mono";
-  src: url(Fonts/IBMPlexMono-Regular.ttf);
-} 
+    font-family: "IBM Plex Mono";
+    src: url(Fonts/IBMPlexMono-Regular.ttf);
+}
 
 
+/* --- Epic Game Jam title --- */
 .window-titlebar {
     font-family: "PixelifySans", sans-serif;
     background: #ffb3de;
@@ -43,30 +45,24 @@ body {
     align-items: center;
     border-bottom: 2px solid #ffb3de;
     position: relative;
-}
-
-.window-title {
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
-.window-actions {
-    font-size: 1rem;
-}
-
+/* --- Login/signup title --- */
 .window-user {
     font-size: 1rem;
     color: #231942;
     opacity: 0.9;
 }
 
+/* --- Login/signup hover --- */
 .window-user:hover {
     color: #ffb3de;
     background-color: #0b0721;
     border-radius: 3px;
 }
 
-
+/* --- Padding for dice game --- */
 .window-content {
     flex: 1;
     padding: 3rem 2rem 2rem 4rem;
@@ -76,12 +72,10 @@ body {
     align-items: flex-start;
 }
 
-.error-message {
-    margin-top: 2rem;
-}
-
+/* --- Error message styles --- */
 .error-code {
     font-size: 1.2rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
     color: #fff;
     font-family: inherit;
@@ -94,7 +88,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .window {
         width: 98vw;
         min-width: unset;
@@ -104,7 +98,7 @@ body {
     }
 }
 
-/* --- Dice Game Styles (existing) --- */
+/* --- Dice Game Styles --- */
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -177,7 +171,6 @@ p {
     transition: transform 0.3s;
 }
 
-/* Special shapes for different dice */
 .d4 {
     width: 0;
     height: 0;
@@ -245,6 +238,7 @@ p {
     margin-bottom: 1rem;
 }
 
+/* --- Buttons styles --- */
 button {
     background-color: #FFADE3;
     border: #FFADE3 solid 2px;
@@ -262,7 +256,6 @@ button:hover {
     background-color: #0b0721;
     color: #FFADE3;
     transform: translateY(-3px);
-
 }
 
 button:active {
