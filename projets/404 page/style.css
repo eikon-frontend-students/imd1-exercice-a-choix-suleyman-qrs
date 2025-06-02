@@ -2,7 +2,6 @@ body {
     background: #0b0721;
     font-family: 'Press Start 2P', 'Fira Mono', 'Consolas', monospace;
     color: #fff;
-    margin: 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -14,11 +13,10 @@ body {
     background: #0b0721;
     border: 2px solid #ffb3de;
     border-radius: 12px;
-    width: 70vw;
     max-width: 900px;
     min-width: 350px;
     min-height: 60vh;
-    box-shadow: 0 0 0 2px #ffb3de, 0 8px 32px #0008;
+    box-shadow: 0 0 0 2px #ffb3de, 0 8px 32px #0000;
     display: flex;
     flex-direction: column;
 }
