@@ -152,7 +152,7 @@ function rollSingleDie(dieElement, isPartOfGroupRoll = false) {
 
 function useScramble(element, text, speed = 80) {
     let i = 0;
-    const scrambleChars = '!@#$%^&*()_+-=~[]{}|;:,.<>?';
+    const scrambleChars = '!@#_+->=;:,.<?';
     const original = text;
     function scrambleStep() {
         let display = '';
