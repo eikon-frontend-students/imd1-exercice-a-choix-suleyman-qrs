@@ -77,20 +77,20 @@ body {
     font-size: 1.2rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
-    color: #fe9a52;
+    color: oklch(77.8% .149 54);
     font-family: inherit;
 }
 
 .error-text {
     font-size: 1rem;
-    color: #fe9a52;
+    color: oklch(77.8% .149 54);
     font-family: inherit;
     margin-bottom: 0.5rem;
 }
 
 @media (max-width: 767px) {
     .window {
-        width: 98vw;
+        width: 100%;
         min-width: unset;
     }
     .window-content {
@@ -278,14 +278,14 @@ button:disabled {
 .history {
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: #fe9a52;
+    color: oklch(77.8% .149 54);
     max-height: 100px;
     overflow-y: auto;
 }
 
 .home-link {
     margin-top: 2rem;
-    color: #fe9a52;
+    color: oklch(77.8% .149 54);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s;
