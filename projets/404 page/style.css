@@ -77,13 +77,13 @@ body {
     font-size: 1.2rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: #fe9a52;
     font-family: inherit;
 }
 
 .error-text {
     font-size: 1rem;
-    color: #fff;
+    color: #fe9a52;
     font-family: inherit;
     margin-bottom: 0.5rem;
 }
@@ -278,14 +278,14 @@ button:disabled {
 .history {
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: #aaa;
+    color: #fe9a52;
     max-height: 100px;
     overflow-y: auto;
 }
 
 .home-link {
     margin-top: 2rem;
-    color: #0f3460;
+    color: #fe9a52;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s;
